@@ -38,3 +38,10 @@ iframe {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* View counter styling */
+.view-counter {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #D6AD60;
+}
