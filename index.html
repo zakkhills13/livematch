@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Stream Cricket Match </title>
+    <title>Live Stream Cricket Match</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="stream-container">
         <h1>Live Stream Cricket Match</h1>
-        <iframe width="100%" height="480" scrolling="no" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" src="https://streamcrichd.com/update/willowcricket.php" allowfullscreen></iframe>
+        <iframe 
+            id="stream-frame"
+            width="100%" 
+            height="480" 
+            src="https://streamcrichd.com/update/willowcricket.php" 
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen
+            allow="autoplay; encrypted-media; picture-in-picture"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            referrerpolicy="no-referrer">
+        </iframe>
         <div class="view-counter">
             <span id="views">0</span> live viewers
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
-
