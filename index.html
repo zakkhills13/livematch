@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Stream Cricket Match #Zaryab</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK (Required for Real-Time Counter) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 </head>
 <body>
     <div class="stream-container">
         <h1>Live Stream Cricket Match #Zaryab</h1>
-        <iframe 
-            id="stream-frame"
-            src="https://streamcrichd.com/update/ptv.php"
-            width="100%" 
-            height="500px" 
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            scrolling="no"
-            allowfullscreen
-            allow="autoplay; encrypted-media; picture-in-picture"
-            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-            referrerpolicy="no-referrer">
-        </iframe>
+        
+        <div class="video-wrapper">
+            <!-- Added loading="eager" for better priority -->
+            <iframe 
+                id="stream-frame"
+                src="https://streamcrichd.com/update/ptv.php" 
+                width="100%" 
+                height="500px" 
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen
+                allow="autoplay; encrypted-media; picture-in-picture"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                referrerpolicy="no-referrer">
+            </iframe>
+            <div id="loading-msg">Loading Stream...</div>
+        </div>
+
         <div class="view-counter">
-            <span id="views">0</span> live viewers
+            <span id="views">Connecting...</span> live viewers
         </div>
     </div>
     <script src="script.js"></script>
